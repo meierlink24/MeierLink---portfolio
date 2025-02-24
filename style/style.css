@@ -1,11 +1,11 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
+
 body {
     background-color: black;
     color: white;
@@ -17,39 +17,39 @@ body {
     align-items: center;
 }
 
-/* Info Container */
+
 .info-container {
-    max-width: 90%; /* Responsive width */
+    max-width: 90%;
     width: 100%;
-    margin: 20px auto; /* Centered */
-    text-align: center; /* Center text */
+    margin: 20px auto; 
+    text-align: center; 
 }
 
 .name {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Space between elements */
+    gap: 10px; 
 }
 
 .name h1 {
-    font-size: 2rem; /* Responsive font size */
+    font-size: 2rem; 
     margin: 0;
 }
 
 .name p {
-    font-size: 1.2rem; /* Responsive font size */
+    font-size: 1.2rem; 
     margin: 0;
 }
 
-/* Hamburger Menu */
+
 :root {
     --fallout-red: #d84400;
     --fallout-black: #000000;
     --fallout-gray: #1a1a1a;
 }
 
-/* Hamburger Icon */
+
 .hamburger-icon {
     cursor: pointer;
     padding: 10px;
@@ -67,18 +67,18 @@ body {
     transition: 0.4s;
 }
 
-/* Menu Content */
+
 .menu-content {
     position: fixed;
     top: 0;
-    right: -300px; /* Hide menu off-screen */
+    right: -300px; 
     width: 250px;
     height: 50vh;
     background-color: var(--fallout-gray);
     border-left: 2px solid var(--fallout-red);
     transition: 0.4s;
     z-index: 999;
-    overflow-y: auto; /* Scroll if content overflows */
+    overflow-y: auto; 
 }
 
 .fallout-menu {
@@ -96,7 +96,7 @@ body {
     text-decoration: none;
     font-size: 18px;
     transition: 0.3s;
-    display: block; /* Make links block-level for better click area */
+    display: block; 
     padding: 5px;
 }
 
@@ -123,7 +123,7 @@ body {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* ASCII Container */
+
 .ascii-container {
     background-color: rgb(0, 0, 0);
     color: rgb(0, 0, 0);
@@ -132,11 +132,11 @@ body {
     padding: 20px;
     overflow: hidden;
     white-space: pre;
-    width: 80%; /* Full width */
+    width: 80%; 
     max-height: 50%;
-    max-width: 800px; /* Limit maximum width */
-    margin: 20px auto; /* Centered */
-    text-align: center; /* Center ASCII art */
+    max-width: 800px; 
+    margin: 20px auto; 
+    text-align: center; 
 }
 
 
