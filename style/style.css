@@ -1,3 +1,159 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
 body {
     background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Info Container */
+.info-container {
+    max-width: 90%; /* Responsive width */
+    width: 100%;
+    margin: 20px auto; /* Centered */
+    text-align: center; /* Center text */
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between elements */
+}
+
+.name h1 {
+    font-size: 2rem; /* Responsive font size */
+    margin: 0;
+}
+
+.name p {
+    font-size: 1.2rem; /* Responsive font size */
+    margin: 0;
+}
+
+/* Hamburger Menu */
+:root {
+    --fallout-red: #d84400;
+    --fallout-black: #000000;
+    --fallout-gray: #1a1a1a;
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.hamburger-icon .bar {
+    width: 30px;
+    height: 3px;
+    background-color: var(--fallout-red);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Menu Content */
+.menu-content {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Hide menu off-screen */
+    width: 250px;
+    height: 50vh;
+    background-color: var(--fallout-gray);
+    border-left: 2px solid var(--fallout-red);
+    transition: 0.4s;
+    z-index: 999;
+    overflow-y: auto; /* Scroll if content overflows */
+}
+
+.fallout-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 60px 20px 0 20px;
+}
+
+.fallout-menu li {
+    margin: 15px 0;
+}
+
+.fallout-menu li a {
+    color: var(--fallout-red);
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+    display: block; /* Make links block-level for better click area */
+    padding: 5px;
+}
+
+.fallout-menu li a:hover {
+    color: var(--fallout-black);
+    background-color: var(--fallout-red);
+}
+
+/* Open State */
+.menu-content.open {
+    right: 0;
+}
+
+/* Hamburger Icon Animation */
+.hamburger-icon.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-icon.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ASCII Container */
+.ascii-container {
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-family: "Courier New", monospace;
+    font-size: 2px;
+    padding: 20px;
+    overflow: hidden;
+    white-space: pre;
+    width: 80%; /* Full width */
+    max-height: 50%;
+    max-width: 800px; /* Limit maximum width */
+    margin: 20px auto; /* Centered */
+    text-align: center; /* Center ASCII art */
+}
+
+
+
+.cursor {
+    display: inline-block;
+    width: 0.5em;
+    height: 1em;
+    background-color: black;
+    animation: blink 6s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
